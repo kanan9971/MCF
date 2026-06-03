@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/funding", "destination": "/funding.html" },
+    { "source": "/promotion", "destination": "/promotion.html" },
+    { "source": "/ai-videos", "destination": "/ai-videos.html" },
+    { "source": "/my-way", "destination": "/my-way.html" },
+    { "source": "/aura", "destination": "/aura.html" },
+    { "source": "/join-us", "destination": "/join-us.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/shop", "destination": "/shop.html" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "mcfintech-website",
+  "version": "1.0.0",
+  "description": "MC Fintech Solutions Ltd — static website",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "deploy": "vercel deploy"
+  }
+}
