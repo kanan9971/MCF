@@ -333,8 +333,9 @@ section { padding: var(--section-v) 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 60%, rgba(26,173,140,0.08) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 20%, rgba(232,168,23,0.15) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 30% 60%, rgba(26,173,140,0.07) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 20%, rgba(232,168,23,0.22) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 90%, rgba(232,168,23,0.1) 0%, transparent 55%);
 }
 
 .hero-inner {
@@ -349,7 +350,7 @@ section { padding: var(--section-v) 0; }
   font-weight: 400;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-warm);
   margin-bottom: 2rem;
   display: block;
 }
@@ -358,7 +359,7 @@ section { padding: var(--section-v) 0; }
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 3.5vw, 2.2rem);
   font-weight: 500;
-  color: var(--text-on-dark);
+  color: #C5DDEF;
   line-height: 1.45;
   margin-bottom: 1.5rem;
 }
@@ -366,7 +367,7 @@ section { padding: var(--section-v) 0; }
 .hero-attr {
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: rgba(232,168,23,0.7);
   font-style: italic;
   margin-bottom: 3rem;
 }
