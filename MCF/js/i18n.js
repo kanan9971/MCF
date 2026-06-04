@@ -552,8 +552,6 @@
     'contact-form-msg-placeholder': { en: 'Tell us how we can help you...', zh: '請告訴我們如何為您提供協助…' },
     'contact-form-btn': { en: 'Send Message →', zh: '發送訊息 →' },
 
-    // 測試標記
-    'test-indicator': { en: '', zh: '【中文模式測試 ✓】' }
   };
 
   function getPageMappings() {
@@ -937,29 +935,6 @@
     all.forEach(function (m) {
       applyTranslation(m.sel, m.key, m.attr);
     });
-    updateTestIndicator();
-  }
-
-  function createTestIndicator() {
-    var el = document.getElementById('lang-test-indicator');
-    if (!el) {
-      el = document.createElement('div');
-      el.id = 'lang-test-indicator';
-      el.style.cssText = 'position:fixed;bottom:20px;right:20px;background:var(--accent);color:#fff;padding:8px 16px;border-radius:8px;font-family:var(--font-body);font-size:0.85rem;font-weight:600;z-index:9999;box-shadow:0 4px 12px rgba(26,173,140,0.4);pointer-events:none;transition:opacity 0.3s;';
-      document.body.appendChild(el);
-    }
-    return el;
-  }
-
-  function updateTestIndicator() {
-    var el = document.getElementById('lang-test-indicator') || createTestIndicator();
-    if (currentLang === 'zh') {
-      el.textContent = translations['test-indicator'].zh;
-      el.style.display = 'block';
-    } else {
-      el.style.display = 'none';
-      el.textContent = '';
-    }
   }
 
   function init() {
@@ -979,11 +954,6 @@
     }
 
     applyAllTranslations();
-
-    if (currentLang === 'zh') {
-      createTestIndicator();
-      updateTestIndicator();
-    }
   }
 
   if (document.readyState === 'loading') {

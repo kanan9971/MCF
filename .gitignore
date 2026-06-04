@@ -1,1 +1,18 @@
-~$*.docx 
+# Temporary Office files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
