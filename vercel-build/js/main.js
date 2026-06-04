@@ -91,6 +91,7 @@
       (currentPath === '/' && linkPath === '/') ||
       (linkPath !== '/' && currentPath.startsWith(linkPath))
     ) {
+      
       link.style.color = 'var(--accent)';
     }
   });
