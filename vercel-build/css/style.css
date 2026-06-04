@@ -8,7 +8,7 @@
   --bg-secondary: #F1F3F8;
   --bg-card: #FFFFFF;
   --bg-elevated: #F6F7FB;
-  --bg-hero: #162233;
+  --bg-hero: #1E3347;
 
   --text-primary: #1A1F2E;
   --text-secondary: #5A5E68;
@@ -334,7 +334,7 @@ section { padding: var(--section-v) 0; }
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 30% 60%, rgba(26,173,140,0.08) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 20%, rgba(232,168,23,0.1) 0%, transparent 50%);
+              radial-gradient(ellipse at 70% 20%, rgba(232,168,23,0.15) 0%, transparent 50%);
 }
 
 .hero-inner {
@@ -378,9 +378,9 @@ section { padding: var(--section-v) 0; }
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--accent-warm);
   padding: 0.75rem 1.5rem;
-  border: 1px solid rgba(26,173,140,0.4);
+  border: 1px solid rgba(232,168,23,0.5);
   border-radius: 100px;
   transition: all 0.3s;
   letter-spacing: 0.05em;
@@ -388,8 +388,8 @@ section { padding: var(--section-v) 0; }
 }
 
 .hero-cta:hover {
-  background: rgba(26,173,140,0.1);
-  border-color: var(--accent);
+  background: rgba(232,168,23,0.1);
+  border-color: var(--accent-warm);
   transform: translateY(2px);
 }
 
@@ -406,7 +406,8 @@ section { padding: var(--section-v) 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 100%, rgba(26,173,140,0.1) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 100%, rgba(26,173,140,0.1) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 10%, rgba(232,168,23,0.1) 0%, transparent 50%);
 }
 
 .page-hero-inner { position: relative; z-index: 1; }
@@ -622,7 +623,8 @@ section { padding: var(--section-v) 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 20% 50%, rgba(26,173,140,0.1) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 20% 50%, rgba(26,173,140,0.1) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 50%, rgba(232,168,23,0.12) 0%, transparent 55%);
 }
 
 .cta-band-inner {
@@ -866,7 +868,7 @@ section { padding: var(--section-v) 0; }
 .price-sale {
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--accent);
+  color: var(--accent-warm);
 }
 
 .price-original {
@@ -1000,7 +1002,7 @@ section { padding: var(--section-v) 0; }
   border-radius: 16px;
   padding: 2rem;
   box-shadow: var(--shadow-sm);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--accent-warm);
 }
 
 .value-num {
@@ -1218,7 +1220,7 @@ section { padding: var(--section-v) 0; }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--accent-warm);
   color: #fff;
   font-family: var(--font-heading);
   font-weight: 700;
