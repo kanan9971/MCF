@@ -1,5 +1,5 @@
-/* MC Fintech Solutions Ltd — i18n 中英文切换 */
-/* Chinese content sourced from original mcfintech.com/zh/ pages */
+/* MC Fintech Solutions Ltd — i18n 中英文切換 */
+/* 繁體中文（香港）翻譯 */
 
 (function () {
   'use strict';
@@ -8,13 +8,13 @@
   let currentLang = localStorage.getItem(STORAGE_KEY) || 'en';
 
   const translations = {
-    // ===== 通用导航 (from doc section 4.1) =====
+    // ===== 通用導航 =====
     'nav-home': { en: 'Home', zh: '首頁' },
     'nav-about': { en: 'About Us', zh: '關於我們' },
     'nav-services': { en: 'Services', zh: '服務' },
-    'nav-funding': { en: 'Funding', zh: '資助' },
+    'nav-funding': { en: 'Funding', zh: '融資' },
     'nav-promotion': { en: 'Promotion', zh: '推廣' },
-    'nav-ai-videos': { en: 'AI Videos ▾', zh: 'AI Videos ▾' },
+    'nav-ai-videos': { en: 'AI Videos ▾', zh: 'AI 影片 ▾' },
     'nav-my-way': { en: 'My Way', zh: 'My Way' },
     'nav-aura': { en: 'Aura', zh: 'Aura' },
     'nav-shop': { en: 'Shop', zh: '商店' },
@@ -24,37 +24,37 @@
     'nav-cta': { en: 'Contact', zh: '聯絡我們' },
     'nav-logo': { en: 'MC Fintech', zh: 'MC Fintech' },
 
-    // 移动端抽屉
+    // 流動端抽屜
     'drawer-home': { en: 'Home', zh: '首頁' },
     'drawer-about': { en: 'About Us', zh: '關於我們' },
     'drawer-services': { en: 'Services', zh: '服務' },
-    'drawer-funding': { en: 'Funding', zh: '資助' },
+    'drawer-funding': { en: 'Funding', zh: '融資' },
     'drawer-promotion': { en: 'Promotion', zh: '推廣' },
-    'drawer-ai-videos': { en: 'AI Videos', zh: 'AI Videos' },
+    'drawer-ai-videos': { en: 'AI Videos', zh: 'AI 影片' },
     'drawer-my-way': { en: 'My Way', zh: 'My Way' },
     'drawer-aura': { en: 'Aura', zh: 'Aura' },
     'drawer-shop': { en: 'Shop', zh: '商店' },
     'drawer-join-us': { en: 'Join Us', zh: '加入我們' },
     'drawer-contact': { en: 'Contact', zh: '聯絡我們' },
 
-    // 页脚 (from doc section 4.1 footer)
-    'footer-company': { en: 'Company', zh: 'Company' },
-    'footer-products': { en: 'Products', zh: 'Products' },
-    'footer-connect': { en: 'Connect', zh: 'Connect' },
+    // 頁腳
+    'footer-company': { en: 'Company', zh: '公司' },
+    'footer-products': { en: 'Products', zh: '產品' },
+    'footer-connect': { en: 'Connect', zh: '聯繫' },
     'footer-home': { en: 'Home', zh: '首頁' },
     'footer-about': { en: 'About Us', zh: '關於我們' },
     'footer-services': { en: 'Services', zh: '服務' },
-    'footer-funding': { en: 'Funding', zh: '資助' },
+    'footer-funding': { en: 'Funding', zh: '融資' },
     'footer-join-us': { en: 'Join Us', zh: '加入我們' },
     'footer-promotion': { en: 'Promotion', zh: '推廣' },
-    'footer-ai-videos': { en: 'AI Videos', zh: 'AI Videos' },
+    'footer-ai-videos': { en: 'AI Videos', zh: 'AI 影片' },
     'footer-my-way': { en: 'My Way', zh: 'My Way' },
     'footer-aura': { en: 'Aura', zh: 'Aura' },
     'footer-shop': { en: 'Shop', zh: '商店' },
     'footer-contact': { en: 'Contact', zh: '聯絡我們' },
     'footer-directions': { en: 'Directions', zh: '取得位置' },
-    'footer-login': { en: 'Login', zh: 'Login' },
-    'footer-register': { en: 'Register', zh: 'Register' },
+    'footer-login': { en: 'Login', zh: '登入' },
+    'footer-register': { en: 'Register', zh: '註冊' },
     'footer-copyright': {
       en: '© All rights reserved MC Fintech Solutions Limited',
       zh: '©萬利科技有限公司版權所有'
@@ -64,7 +64,7 @@
       zh: '香港九龍佐敦渡船街28號寶時商業中心12樓'
     },
 
-    // ===== 首页 index.html (from doc section 3.14 / 4.1) =====
+    // ===== 首頁 index.html =====
     'index-hero-tagline': { en: 'Think and Link', zh: '思考和連接' },
     'index-hero-quote': {
       en: '"Ignoring technological change in a financial system based upon technology is like a mouse starving to death because someone moved their cheese"',
@@ -72,30 +72,30 @@
     },
     'index-hero-attr': { en: '— Chris Skinner', zh: '— 克里斯·斯金納' },
     'index-hero-cta': { en: 'Explore ↓', zh: '探索更多 ↓' },
-    'index-about-label': { en: 'About MC Fintech', zh: 'About MC Fintech' },
-    'index-about-title': { en: 'Innovative Enterprise Management Systems', zh: 'Innovative Enterprise Management Systems' },
+    'index-about-label': { en: 'About MC Fintech', zh: '關於萬利科技' },
+    'index-about-title': { en: 'Innovative Enterprise Management Systems', zh: '創新企業管理系統' },
     'index-about-desc': {
       en: 'MC Fintech Solutions Ltd develops innovative enterprise management computer systems. Its comprehensive solutions boost business efficiency, optimize human resource use, and, backed by years of professional experience, deliver effective, user-friendly, stable, and reliable tools to enhance operations.',
       zh: '萬利科技致力於開發創新企業管理電腦系統，其全面解決方案可提升業務效率、優化人力資源利用，並憑藉多年專業經驗，提供高效、易用、穩定可靠的工具以提升營運效率。'
     },
     'index-badge-main': { en: 'MC Fintech', zh: 'MC Fintech' },
-    'index-badge-sub': { en: 'Est. Hong Kong', zh: 'Est. Hong Kong' },
-    'index-service-label': { en: 'What We Offer', zh: 'What We Offer' },
+    'index-badge-sub': { en: 'Est. Hong Kong', zh: '立足香港' },
+    'index-service-label': { en: 'What We Offer', zh: '我們提供什麼' },
     'index-service-title': { en: 'Our Service', zh: '我們的服務' },
     'index-service-desc': {
       en: 'MC Fintech delivers cutting-edge fintech and tech-integrated services, including AI avatar video creation, IT-driven operational solutions, computer hardware retail, and AI digital person-powered financial query support. With a focus on blending innovation and practicality, it tailors services to streamline workflows, enhance efficiency, and provide seamless, intelligent experiences, empowering clients to thrive in a tech-driven landscape.',
-      zh: '萬利科技公司提供尖端金融科技及技術整合服務，包括 AI 虛擬形象影片製作、IT 驅動的營運解決方案、電腦硬體零售以及 AI 數字人金融諮詢支援。 萬利科技公司著重於創新與實用的融合，透過客製化服務簡化工作流程、提升效率，並提供無縫智慧體驗，賦能客戶在科技驅動的時代蓬勃發展。'
+      zh: '萬利科技公司提供尖端金融科技及技術整合服務，包括 AI 虛擬形象影片製作、IT 驅動的營運解決方案、電腦硬體零售以及 AI 數字人金融諮詢支援。萬利科技公司著重於創新與實用的融合，透過客製化服務簡化工作流程、提升效率，並提供無縫智慧體驗，賦能客戶在科技驅動的時代蓬勃發展。'
     },
-    'index-service-readmore': { en: 'Read More →', zh: '瞭解更多 →' },
-    'index-promise-label': { en: 'Our Promise', zh: 'Our Promise' },
-    'index-promise-title': { en: 'Customer First', zh: '以客爲先' },
+    'index-service-readmore': { en: 'Read More →', zh: '了解更多 →' },
+    'index-promise-label': { en: 'Our Promise', zh: '我們的承諾' },
+    'index-promise-title': { en: 'Customer First', zh: '以客為先' },
     'index-promise-desc': {
       en: 'Our commitment is to customer-centric service, bringing breakthroughs in enterprise management through effective, reliable, and specialized services.',
       zh: '我們的承諾是以客戶為本，為企業管理帶來突破，提供有效、可靠及專門的服務。'
     },
-    'index-promise-readmore': { en: 'Read More →', zh: '瞭解更多 →' },
-    'index-services-label': { en: 'Services', zh: 'Services' },
-    'index-services-title': { en: 'Professional services to streamline your business', zh: 'Professional services to streamline your business' },
+    'index-promise-readmore': { en: 'Read More →', zh: '了解更多 →' },
+    'index-services-label': { en: 'Services', zh: '專業服務' },
+    'index-services-title': { en: 'Professional services to streamline your business', zh: '專業服務助您簡化業務營運' },
     'index-services-desc': {
       en: 'We offer a range of convenient and professional services designed to streamline your business operations. By choosing MC Fintech Solutions Ltd, you will gain access to a professional team that delivers quick, reliable, and specialized services, making your business management more efficient, secure, and effective.',
       zh: '我們提供一系列便捷專業的服務，旨在簡化您的業務運作。選擇萬利科技公司，您將獲得一支專業團隊，提供快速、可靠且專業的服務，讓您的業務管理更有效率、更安全、更有效。'
@@ -103,25 +103,25 @@
     'index-service1-title': { en: 'Enterprise Network Solutions', zh: '企業網絡解決方案' },
     'index-service1-desc': {
       en: 'Our Enterprise Network Solutions, tailored for fintech, connect your systems, partners, and clients with secure, real-time connectivity. Built to fortify data flow, align with compliance, and scale with your growth, they streamline collaboration, mitigate risks, and keep operations agile.',
-      zh: '我們專為金融科技量身訂製的企業網路解決方案，為您的系統、合作夥伴和客戶提供安全、即時的連線。這些解決方案旨在強化資料流，符合合規性，並隨著您的業務成長而擴展，從而簡化協作、降低風險並保持敏捷營運。'
+      zh: '我們專為金融科技量身訂製的企業網絡解決方案，為您的系統、合作夥伴和客戶提供安全、即時的連線。這些解決方案旨在強化資料流，符合合規要求，並隨著您的業務增長而擴展，從而簡化協作、降低風險並保持敏捷營運。'
     },
     'index-service2-title': { en: 'Enterprise Cloud Solutions', zh: '企業雲端解決方案' },
     'index-service2-desc': {
       en: 'Harnessing secure cloud infrastructure, we craft and deploy scalable platforms to elevate your financial operations — from transaction processing and regulatory reporting to global team collaboration. Our solutions are built to cut costs, enhance flexibility, and grow with your business demands, simplifying complex tasks and fueling organizational agility.',
-      zh: '我們利用安全的雲端基礎架構，建構並部署可擴展的平台，以提升您的財務營運—從交易處理、監管報告到全球團隊協作。我們的解決方案旨在降低成本、增強靈活性，並隨著您的業務需求而擴展，簡化複雜的任務並提升組織敏捷性。'
+      zh: '我們利用安全的雲端基礎架構，建構並部署可擴展的平台，以提升您的財務營運——從交易處理、監管報告到全球團隊協作。我們的解決方案旨在降低成本、增強靈活性，並隨著您的業務需求而擴展，簡化複雜的任務並提升組織敏捷性。'
     },
-    'index-service3-title': { en: 'Cyber Security Solutions', zh: '網路安全解決方案' },
+    'index-service3-title': { en: 'Cyber Security Solutions', zh: '網絡安全解決方案' },
     'index-service3-desc': {
       en: 'Using cutting-edge threat intelligence, we develop and strengthen defenses to shield your financial assets — from transaction data and client information to core systems. Our solutions are built to block breaches, ensure compliance, and adapt to emerging risks, safeguarding daily operations and reinforcing organizational resilience.',
-      zh: '我們運用尖端威脅情報，開發並強化防禦措施，保護您的金融資產－從交易資料、客戶資訊到核心系統。我們的解決方案旨在阻止違規行為，確保合規性，並適應新興風險，保障日常營運安全並增強組織韌性。'
+      zh: '我們運用尖端威脅情報，開發並強化防禦措施，保護您的金融資產——從交易資料、客戶資訊到核心系統。我們的解決方案旨在阻止違規行為、確保合規，並適應新興風險，保障日常營運安全並增強組織韌性。'
     },
-    'index-service4-title': { en: 'AI Solutions', zh: 'AI Solutions' },
+    'index-service4-title': { en: 'AI Solutions', zh: '人工智能解決方案' },
     'index-service4-desc': {
       en: 'Harnessing state-of-the-art artificial intelligence, we build and deploy smart tools to transform your financial processes — from fraud detection and algorithmic trading to personalized client insights. Our solutions are built to sharpen decision-making, automate complex tasks, and align with shifting market dynamics, enhancing operational precision and driving business growth.',
-      zh: 'Harnessing state-of-the-art artificial intelligence, we build and deploy smart tools to transform your financial processes—from fraud detection and algorithmic trading to personalized client insights. Our solutions are built to sharpen decision-making, automate complex tasks, and align with shifting market dynamics, enhancing operational precision and driving business growth.'
+      zh: '我們利用最先進的人工智能技術，構建並部署智能工具以革新您的金融流程——從欺詐檢測和演算法交易到個性化客戶洞察。我們的解決方案旨在提升決策精準度、自動化複雜任務，並適應不斷變化的市場動態，增強營運精確度並推動業務增長。'
     },
-    'index-testimonials-label': { en: 'Testimonials', zh: 'Testimonials' },
-    'index-testimonials-title': { en: 'What people are saying', zh: '客戶對我們的評價' },
+    'index-testimonials-label': { en: 'Testimonials', zh: '客戶評價' },
+    'index-testimonials-title': { en: 'What people are saying', zh: '客戶心聲' },
     'index-testimonial1': {
       en: '"MC Fintech Solutions Ltd\'s enterprise management system has significantly improved our operational efficiency and customer satisfaction."',
       zh: '"萬利科技有限公司的企業管理系統大大提升了我們的運作效率和客戶滿意度。"'
@@ -130,17 +130,17 @@
     'index-testimonial1-role': { en: 'Retailer', zh: '零售商' },
     'index-testimonial2': {
       en: '"Our collaboration with MC Fintech Solutions on a joint research project exceeded all expectations. Their team\'s insights into emerging fintech trends and rigorous analytical approach significantly enhanced the quality of our findings."',
-      zh: '"我們與萬利科技有限公司在聯合研究計畫上的合作超越了所有人的預期。他們的團隊對新興金融科技趨勢的洞察力和嚴謹的分析方法大大提高了我們研究結果的品質。"'
+      zh: '"我們與萬利科技有限公司在聯合研究計劃上的合作超越了所有人的預期。他們的團隊對新興金融科技趨勢的洞察力和嚴謹的分析方法大大提高了我們研究結果的質素。"'
     },
     'index-testimonial2-author': { en: 'Sarah C.', zh: 'Sarah C.' },
     'index-testimonial2-role': { en: 'Financier', zh: '金融家' },
     'index-testimonial3': {
       en: '"Their commitment to data protection and understanding of financial systems allowed us to create a robust solution tailored for fintech applications."',
-      zh: '"他們對數據保護的承諾和對金融系統的理解使我們能夠創建針對金融科技應用的強大解決方案。"'
+      zh: '"他們對數據保護的承諾和對金融系統的深入理解，使我們能夠創建針對金融科技應用的強大解決方案。"'
     },
     'index-testimonial3-author': { en: 'David Z.', zh: 'David Z.' },
     'index-testimonial3-role': { en: 'Product Manager', zh: '產品經理' },
-    'index-cooperation-label': { en: 'Cooperation', zh: 'Cooperation' },
+    'index-cooperation-label': { en: 'Cooperation', zh: '攜手合作' },
     'index-cooperation-title': { en: 'We welcome all forms of cooperation', zh: '我們歡迎任何形式的合作' },
     'index-cooperation-desc': {
       en: 'Join MC Fintech Solutions Ltd and be part of a dynamic team revolutionizing enterprise management with innovative technology. We\'d love to hear from you!',
@@ -148,385 +148,411 @@
     },
     'index-cooperation-btn': { en: 'Join Us →', zh: '加入我們 →' },
 
-    // ===== 关于我们 about.html (from doc section 3.2 / 4.2) =====
-    'about-hero-label': { en: 'Who We Are', zh: 'Who We Are' },
+    // ===== 關於我們 about.html =====
+    'about-hero-label': { en: 'Who We Are', zh: '關於我們' },
     'about-hero-title': { en: 'About Us', zh: '關於我們' },
-    'about-story-label': { en: 'Our Story', zh: 'Our Story' },
-    'about-story-title': { en: 'Built on Experience. Driven by Innovation.', zh: 'Built on Experience. Driven by Innovation.' },
+    'about-story-label': { en: 'Our Story', zh: '我們的故事' },
+    'about-story-title': { en: 'Built on Experience. Driven by Innovation.', zh: '建基於經驗，以創新驅動' },
     'about-story-desc': {
       en: 'Established with a rich history of industry service experience, MC Fintech Solutions Ltd has successfully served hundreds of renowned group companies and brand clients. With a passion for design, keen insight into marketing trends, and a deep understanding of the market, we thrive alongside our clients in a dynamic environment.',
-      zh: '萬利科技有限公司擁有豐富的行業服務經驗，已成功服務數百家知名集團公司和品牌客戶。憑藉對設計的熱情、對行銷趨勢的敏銳洞察力和對市場的深刻理解，我們在充滿活力的環境中與客戶一起蓬勃發展。'
+      zh: '萬利科技有限公司擁有豐富的行業服務經驗，已成功服務數百家知名集團公司和品牌客戶。憑藉對設計的熱情、對市場趨勢的敏銳洞察力和對市場的深刻理解，我們在充滿活力的環境中與客戶一起蓬勃發展。'
     },
     'about-mission-label': { en: 'Our Mission', zh: '我們的使命' },
-    'about-mission-title': { en: 'Streamlining Business, Powering Growth', zh: 'Streamlining Business, Powering Growth' },
+    'about-mission-title': { en: 'Streamlining Business, Powering Growth', zh: '簡化業務流程，推動業務增長' },
     'about-mission-desc': {
       en: 'Our mission is to streamline business operations, making them more efficient, excellent and effective. Through our enterprise management systems, we help various industries accelerate their development.',
-      zh: '我們的使命是簡化業務運營，使其更有效率、卓越與有影響力。透過我們的企業管理系統，我們幫助各行各業加速發展。'
+      zh: '我們的使命是簡化業務營運，使其更有效率、卓越與富有成效。透過我們的企業管理系統，我們幫助各行各業加速發展。'
     },
-    'about-mission-badge': { en: 'Mission Driven', zh: 'Mission Driven' },
-    'about-mission-sub': { en: 'Innovation & Excellence', zh: 'Innovation & Excellence' },
+    'about-mission-badge': { en: 'Mission Driven', zh: '使命驅動' },
+    'about-mission-sub': { en: 'Innovation & Excellence', zh: '創新與卓越' },
     'about-values-label': { en: 'Our Values', zh: '我們的價值' },
-    'about-values-title': { en: 'The principles that guide everything we do', zh: 'The principles that guide everything we do' },
-    'about-value1': { en: 'People-Oriented and Heartfelt Service', zh: '以人為本與用心服務' },
-    'about-value2': { en: 'Perfection Pursuit — Integrity and Innovation', zh: '追求完美誠信與創新' },
-    'about-value3': { en: 'Promote Business Innovation, Service to Enhance Brand Value', zh: '推動業務創新，服務提升品牌價值' },
-    'about-value4': { en: 'Emphasis on Technology — Using Technology to Create Value for You', zh: '重視科技通過科技為您創造價值' },
-    'about-value5': { en: 'Customer-First Service — We foster transparency and security', zh: 'Customer-First Service — We foster transparency and security' },
-    'about-value6': { en: 'We aim to connect customer with us through Innovations and Creative Thinking.', zh: '我們的目標是透過創新與創意思維連繫客戶。' },
-    'about-cta-label': { en: 'Get In Touch', zh: 'Get In Touch' },
-    'about-cta-title': { en: 'Ready to work together?', zh: 'Ready to work together?' },
+    'about-values-title': { en: 'The principles that guide everything we do', zh: '指導我們一切行動的原則' },
+    'about-value1': { en: 'People-Oriented and Heartfelt Service', zh: '以人為本，用心服務' },
+    'about-value2': { en: 'Perfection Pursuit — Integrity and Innovation', zh: '追求完美——誠信與創新' },
+    'about-value3': { en: 'Promote Business Innovation, Service to Enhance Brand Value', zh: '推動業務創新，以服務提升品牌價值' },
+    'about-value4': { en: 'Emphasis on Technology — Using Technology to Create Value for You', zh: '重視科技——用科技為您創造價值' },
+    'about-value5': { en: 'Customer-First Service — We foster transparency and security', zh: '以客為先——我們倡導透明與安全' },
+    'about-value6': { en: 'We aim to connect customer with us through Innovations and Creative Thinking.', zh: '我們旨在透過創新與創意思維與客戶建立聯繫。' },
+    'about-cta-label': { en: 'Get In Touch', zh: '聯絡我們' },
+    'about-cta-title': { en: 'Ready to work together?', zh: '準備好攜手合作嗎？' },
     'about-cta-desc': {
       en: 'Whether you\'re an enterprise looking to modernize, or a startup ready to scale — we\'re here to help.',
-      zh: 'Whether you\'re an enterprise looking to modernize, or a startup ready to scale — we\'re here to help.'
+      zh: '無論您是尋求現代化的企業，還是準備擴展的初創公司——我們隨時為您提供協助。'
     },
     'about-cta-btn': { en: 'Contact Us →', zh: '聯絡我們 →' },
 
-    // ===== 服务 services.html (from doc section 3.3 / 4.3) =====
-    'services-hero-label': { en: 'What We Offer', zh: 'What We Offer' },
-    'services-hero-title': { en: 'Services', zh: '服務' },
+    // ===== 服務 services.html =====
+    'services-hero-label': { en: 'What We Offer', zh: '我們提供什麼' },
+    'services-hero-title': { en: 'Services', zh: '專業服務' },
     'services-intro': {
       en: 'We offer a range of convenient and professional services designed to streamline your business operations. By choosing MC Fintech Solutions Ltd, you will gain access to a professional team that delivers quick, reliable, and specialized services, making your business management more efficient, secure, and effective.',
       zh: '我們提供一系列便捷專業的服務，旨在簡化您的業務運作。選擇萬利科技公司，您將獲得一支專業團隊，提供快速、可靠且專業的服務，讓您的業務管理更有效率、更安全、更有效。'
     },
+    'services-network-label': { en: 'Network', zh: '網絡' },
+    'services-network-title': { en: 'Enterprise Network Solutions', zh: '企業網絡解決方案' },
+    'services-network-desc': {
+      en: 'Our Enterprise Network Solutions, tailored for fintech, connect your systems, partners, and clients with secure, real-time connectivity. Built to fortify data flow, align with compliance, and scale with your growth, they streamline collaboration, mitigate risks, and keep operations agile.',
+      zh: '我們專為金融科技量身訂製的企業網絡解決方案，為您的系統、合作夥伴和客戶提供安全、即時的連線。旨在強化資料流，符合合規要求，並隨著您的業務增長而擴展，從而簡化協作、降低風險並保持敏捷營運。'
+    },
+    'services-cloud-label': { en: 'Cloud', zh: '雲端' },
+    'services-cloud-title': { en: 'Enterprise Cloud Solutions', zh: '企業雲端解決方案' },
+    'services-cloud-desc': {
+      en: 'Harnessing secure cloud infrastructure, we craft and deploy scalable platforms to elevate your financial operations — from transaction processing and regulatory reporting to global team collaboration. Our solutions are built to cut costs, enhance flexibility, and grow with your business demands, simplifying complex tasks and fueling organizational agility.',
+      zh: '我們利用安全的雲端基礎架構，建構並部署可擴展的平台，以提升您的財務營運——從交易處理、監管報告到全球團隊協作。我們的解決方案旨在降低成本、增強靈活性，並隨著您的業務需求而擴展，簡化複雜的任務並提升組織敏捷性。'
+    },
+    'services-security-label': { en: 'Security', zh: '安全' },
+    'services-security-title': { en: 'Cyber Security Solutions', zh: '網絡安全解決方案' },
+    'services-security-desc': {
+      en: 'Using cutting-edge threat intelligence, we develop and strengthen defenses to shield your financial assets — from transaction data and client information to core systems. Our solutions are built to block breaches, ensure compliance, and adapt to emerging risks, safeguarding daily operations and reinforcing organizational resilience.',
+      zh: '我們運用尖端威脅情報，開發並強化防禦措施，保護您的金融資產——從交易資料、客戶資訊到核心系統。我們的解決方案旨在阻止違規行為、確保合規，並適應新興風險，保障日常營運安全並增強組織韌性。'
+    },
+    'services-ai-label': { en: 'Artificial Intelligence', zh: '人工智能' },
+    'services-ai-title': { en: 'AI Solutions', zh: '人工智能解決方案' },
+    'services-ai-desc': {
+      en: 'Harnessing state-of-the-art artificial intelligence, we build and deploy smart tools to transform your financial processes — from fraud detection and algorithmic trading to personalized client insights. Our solutions are built to sharpen decision-making, automate complex tasks, and align with shifting market dynamics, enhancing operational precision and driving business growth.',
+      zh: '我們利用最先進的人工智能技術，構建並部署智能工具以革新您的金融流程——從欺詐檢測和演算法交易到個性化客戶洞察。我們的解決方案旨在提升決策精準度、自動化複雜任務，並適應不斷變化的市場動態，增強營運精確度並推動業務增長。'
+    },
     'services-quote': {
       en: '"One of the hardest things to do in technology is disrupt yourself."',
-      zh: '"在技術領域，最難做的事情之一就是阻擋自己。"'
+      zh: '"在技術領域，最難做的事情之一就是顛覆自己。"'
     },
     'services-quote-author': { en: '— Matt Mullenweg', zh: '— 馬特·查爾斯·穆倫維格' },
 
-    // ===== 融资 funding.html (from doc section 3.4 / 4.4) =====
-    'funding-hero-label': { en: 'Funding', zh: 'Funding' },
-    'funding-hero-title': { en: 'MCF Funding Service', zh: 'MCF融資服務' },
-    'funding-why-label': { en: 'Why Choose Us', zh: '爲什麽選擇我們' },
-    'funding-why-title': { en: 'Empowering Fintech Growth in Hong Kong', zh: 'Empowering Fintech Growth in Hong Kong' },
+    // ===== 融資 funding.html =====
+    'funding-hero-label': { en: 'Funding', zh: '融資服務' },
+    'funding-hero-title': { en: 'MCF Funding Service', zh: 'MCF 融資服務' },
+    'funding-why-label': { en: 'Why Choose Us', zh: '為什麼選擇我們' },
+    'funding-why-title': { en: 'Empowering Fintech Growth in Hong Kong', zh: '推動香港金融科技發展' },
     'funding-why-desc': {
       en: 'In Hong Kong\'s dynamic FinTech landscape, we empower established players to adapt and innovate while providing startups with the targeted resources they need to scale. We also guide investors toward actionable opportunities. Our commitment is to foster growth that not only strengthens the individual businesses but also enhances the broader financial community, reinforcing Hong Kong\'s position as a global FinTech hub.',
-      zh: '在香港蓬勃發展的金融科技領域，我們賦能成熟企業，使其適應並創新，同時為新創公司提供其拓展規模所需的精準資源。我們也引導投資人把握切實可行的投資機會。我們致力於促進成長，不僅增強個體企業實力，更提升整個金融界的水平，鞏固香港作為全球金融科技中心的地位。'
+      zh: '在香港蓬勃發展的金融科技領域，我們賦能成熟企業適應並創新，同時為初創公司提供拓展規模所需的精準資源。我們亦引導投資者把握切實可行的投資機會。我們致力於促進增長，不僅增強個體企業實力，更提升整個金融界的水平，鞏固香港作為全球金融科技中心的地位。'
     },
-    'funding-badge-main': { en: 'HK FinTech', zh: 'HK FinTech' },
-    'funding-badge-sub': { en: 'Global Hub', zh: 'Global Hub' },
-    'funding-opp-label': { en: 'Opportunities', zh: 'Opportunities' },
-    'funding-opp-title': { en: 'Funding Opportunities', zh: '萬利科技有限公司的融資機會' },
-    'funding-opp1-label': { en: 'Enterprise Innovation', zh: 'Enterprise Innovation' },
+    'funding-badge-main': { en: 'HK FinTech', zh: '香港金融科技' },
+    'funding-badge-sub': { en: 'Global Hub', zh: '國際樞紐' },
+    'funding-opp-label': { en: 'Opportunities', zh: '融資機遇' },
+    'funding-opp-title': { en: 'Funding Opportunities', zh: '萬利科技有限公司的融資機遇' },
+    'funding-opp1-label': { en: 'Enterprise Innovation', zh: '企業創新' },
     'funding-opp1-desc': {
       en: 'Provide funding consulting service to facilitate the adoption of cutting-edge fintech solutions by local enterprises, organisations, and the public sector, with a view to promoting innovation and technology in Hong Kong\'s financial industry.',
-      zh: '提供融資諮詢服務，促進本地企業、機構及公部門採用尖端金融科技解決方案，推動香港金融業的創新科技發展。'
+      zh: '提供融資諮詢服務，促進本地企業、機構及公營部門採用尖端金融科技解決方案，推動香港金融業的創新科技發展。'
     },
-    'funding-opp2-label': { en: 'Talent Development', zh: 'Talent Development' },
+    'funding-opp2-label': { en: 'Talent Development', zh: '人才培育' },
     'funding-opp2-desc': {
       en: 'Provide funding consulting service to technology talent for them to undertake research and development work in Hong Kong, and to local enterprises for their staff to receive fintech training.',
-      zh: '提供融資咨詢服務為科技人才提供在港從事研發工作的機會，並為本地企業提供員工接受金融科技培訓的機會。'
+      zh: '提供融資諮詢服務，為科技人才提供在港從事研發工作的機會，並為本地企業提供員工接受金融科技培訓的機會。'
     },
-    'funding-commit-label': { en: 'Our Commitment', zh: 'Our Commitment' },
-    'funding-commit-title': { en: 'Funding Scheme and Support', zh: '資助計畫及支持' },
+    'funding-commit-label': { en: 'Our Commitment', zh: '我們的承諾' },
+    'funding-commit-title': { en: 'Funding Scheme and Support', zh: '融資計劃及支持' },
     'funding-commit-desc': {
       en: 'At MC Fintech Solutions Limited, we are committed to fostering innovation and technological advancement in Hong Kong\'s fintech sector. Our funding initiatives aim to support local enterprises, startups, and talent in driving the future of financial technology.',
-      zh: '在萬利科技有限公司，我們致力於促進香港金融科技領域的創新和技術進步。我們的資助計畫旨在支持本地企業、新創企業和人才推動金融科技的未來。'
+      zh: '在萬利科技有限公司，我們致力於促進香港金融科技領域的創新和技術進步。我們的融資計劃旨在支持本地企業、初創公司和人才，共同推動金融科技的未來。'
     },
-    'funding-support-label': { en: 'Supporting Services', zh: 'Supporting Service' },
-    'funding-support-title': { en: 'How We Help You Succeed', zh: 'How We Help You Succeed' },
-    'funding-card1-title': { en: 'Fundraising Solution', zh: 'Fundraising Solution' },
+    'funding-support-label': { en: 'Supporting Services', zh: '支援服務' },
+    'funding-support-title': { en: 'How We Help You Succeed', zh: '我們如何助您邁向成功' },
+    'funding-card1-title': { en: 'Fundraising Solution', zh: '融資解決方案' },
     'funding-card1-desc': {
       en: 'End-to-end fundraising support to connect your fintech venture with the right investors and capital sources.',
-      zh: '我們的募款解決方案簡化了資金獲取管道，將您與目標投資者聯繫起來，並引導您從策略到結束的每個步驟，以實現高效、成功的融資。'
+      zh: '端到端的融資支援，將您的金融科技項目與合適的投資者和資金來源對接。'
     },
-    'funding-card2-title': { en: 'Pitch Deck Creation Service', zh: 'Pitch Deck Creation Service' },
+    'funding-card2-title': { en: 'Pitch Deck Creation Service', zh: '融資演示製作服務' },
     'funding-card2-desc': {
       en: 'Compelling, investor-ready pitch decks that articulate your vision and demonstrate market opportunity.',
-      zh: '我們的簡報創建服務精心製作引人注目、以投資者為中心的簡報——將清晰的故事敘述與數據視覺化相結合——以突出您的願景並激發資金興趣。'
+      zh: '引人注目、面向投資者的專業演示，清晰闡述您的願景並展示市場機遇。'
     },
-    'funding-card3-title': { en: 'Financial Modeling Service', zh: 'Financial Modeling Service' },
+    'funding-card3-title': { en: 'Financial Modeling Service', zh: '財務建模服務' },
     'funding-card3-desc': {
       en: 'Robust financial models and projections to support funding applications and strategic planning.',
-      zh: '我們的財務建模服務可以建立穩健的、適合投資者的預測（映射成長、風險和回報），以清晰的、有數據支持的見解來加強您的融資案例。'
+      zh: '穩健的財務模型和預測，為融資申請和策略規劃提供支援。'
     },
-    'funding-card4-title': { en: 'Investment Outreach Service', zh: 'Investment Outreach Service' },
+    'funding-card4-title': { en: 'Investment Outreach Service', zh: '投資拓展服務' },
     'funding-card4-desc': {
       en: 'Strategic outreach to our network of investors, venture capital firms, and institutional backers.',
-      zh: '我們的投資拓展服務將您與目標投資者聯繫起來，利用量身定制的溝通和關係建立來擴大您的融資機會。'
+      zh: '策略性地對接我們的投資者、風險投資公司和機構支持者網絡。'
     },
-    'funding-card5-title': { en: 'Market Research Support', zh: 'Market Research Support' },
+    'funding-card5-title': { en: 'Market Research Support', zh: '市場研究支援' },
     'funding-card5-desc': {
       en: 'Data-driven market research to validate your concept, size opportunities, and inform strategy.',
-      zh: '我們的市場研究支援服務提供有關趨勢、競爭對手和機會的可行見解，以加強您的定位和投資者吸引力。'
+      zh: '數據驅動的市場研究，驗證您的概念、評估機遇並指導策略方向。'
     },
-    'funding-card6-title': { en: 'Fintech Legal Support Service', zh: 'Fintech Legal Support Service' },
+    'funding-card6-title': { en: 'Fintech Legal Support Service', zh: '金融科技法律支援服務' },
     'funding-card6-desc': {
       en: 'Expert legal guidance on licensing, compliance, regulatory requirements, and funding agreements.',
-      zh: '我們的金融科技法律支援服務涵蓋監管框架、合約和合規性—以堅實的法律基礎保障您的營運並建立投資者信任。'
+      zh: '就牌照、合規、監管要求和融資協議提供專業法律指導。'
     },
-    'funding-cta-label': { en: 'Get Started', zh: 'Get Started' },
-    'funding-cta-title': { en: 'Ready to secure your funding?', zh: 'Ready to secure your funding?' },
+    'funding-cta-label': { en: 'Get Started', zh: '立即開始' },
+    'funding-cta-title': { en: 'Ready to secure your funding?', zh: '準備好獲取融資了嗎？' },
     'funding-cta-desc': {
       en: 'Contact our team today to learn how we can support your fintech journey.',
-      zh: 'Contact our team today to learn how we can support your fintech journey.'
+      zh: '立即聯絡我們的團隊，了解我們如何支持您的金融科技之旅。'
     },
     'funding-cta-btn': { en: 'Contact Us →', zh: '聯絡我們 →' },
 
-    // ===== 推广 promotion.html (from doc section 3.5 / 4.5) =====
-    'promotion-hero-label': { en: 'Latest Innovations', zh: 'Latest Innovations' },
+    // ===== 推廣 promotion.html =====
+    'promotion-hero-label': { en: 'Latest Innovations', zh: '最新產品' },
     'promotion-hero-title': { en: 'Store', zh: '商店' },
     'promotion-hero-desc': {
       en: 'Join MC Fintech Solutions Limited: Innovate the Future of Finance',
       zh: '加入萬利科技有限公司：創新金融的未來'
     },
-    'promotion-intro-label': { en: 'What\'s New', zh: 'What\'s New' },
-    'promotion-intro-title': { en: 'At the forefront of fintech innovation', zh: 'At the forefront of fintech innovation' },
+    'promotion-intro-label': { en: 'What\'s New', zh: '最新動態' },
+    'promotion-intro-title': { en: 'At the forefront of fintech innovation', zh: '走在金融科技創新前沿' },
     'promotion-intro-desc': {
       en: 'At MC Fintech Solutions Limited, we\'re passionate about revolutionizing the financial technology landscape. We\'re thrilled to introduce our latest innovations designed to keep you at the forefront of the fintech industry.',
-      zh: '在萬利有限公司，我們熱衷於徹底改變金融技術領域。我們很高興推出我們最新的創新產品，旨在讓您始終處於金融科技行業的前沿。'
+      zh: '在萬利科技有限公司，我們熱衷於革新金融科技領域。我們很高興向您介紹我們最新的創新產品，旨在讓您始終走在金融科技行業的前沿。'
     },
-    'promotion-cta-label': { en: 'Don\'t Miss Out', zh: 'Don\'t Miss Out' },
-    'promotion-cta-title': { en: 'Transform your financial operations', zh: '連接我們' },
-    'promotion-cta-desc': {
-      en: 'Don\'t miss this opportunity to transform your financial operations with MC Fintech Solutions Limited. Contact us today to schedule a demo and experience the future of fintech!',
-      zh: '不要錯過這個與萬利科技有限公司一起改變您的財務運營的機會。立即聯繫我們，安排演示並體驗金融科技的未來！'
-    },
-    'promotion-cta-btn': { en: 'Contact Us →', zh: '馬上購物 →' },
-
-    // promotion product cards (from doc section 4.5)
+    'promotion-products-label': { en: 'Our Products', zh: '我們的產品' },
     'promotion-date1': { en: 'Aug 23, 2026', zh: '2026年8月23日' },
     'promotion-product1-title': { en: 'F Plus Program', zh: 'F Plus 計劃' },
     'promotion-product1-desc': { en: 'Advanced AI-driven algorithm to detect and analyze currency trends.', zh: '先進的 AI 驅動演算法，用於檢測和分析貨幣趨勢。' },
     'promotion-date2': { en: 'Oct 14, 2026', zh: '2026年10月14日' },
     'promotion-product2-title': { en: 'Smartwatch', zh: '智能手錶' },
-    'promotion-product2-desc': { en: 'Light-weight and customized watch for daily operations', zh: '輕巧客製化的日常運營用手錶' },
+    'promotion-product2-desc': { en: 'Light-weight and customized watch for daily operations', zh: '輕巧而度身訂造的日常營運手錶' },
     'promotion-date3': { en: 'Aug 23, 2026', zh: '2026年8月23日' },
-    'promotion-product3-title': { en: 'Laptop 1000', zh: '手提電腦1000' },
-    'promotion-product3-desc': { en: 'High quality and user-friendly laptop to assist your work', zh: '高品質、使用者友善的筆記型電腦，助力您的工作' },
+    'promotion-product3-title': { en: 'Laptop 1000', zh: '手提電腦 1000' },
+    'promotion-product3-desc': { en: 'High quality and user-friendly laptop to assist your work', zh: '高品質、易於使用的手提電腦，助您高效工作' },
+    'promotion-cta-label': { en: 'Don\'t Miss Out', zh: '切勿錯過' },
+    'promotion-cta-title': { en: 'Transform your financial operations', zh: '革新您的金融營運' },
+    'promotion-cta-desc': {
+      en: 'Don\'t miss this opportunity to transform your financial operations with MC Fintech Solutions Limited. Contact us today to schedule a demo and experience the future of fintech!',
+      zh: '不要錯過這個與萬利科技有限公司一起革新您金融營運的機會。立即聯絡我們，安排演示並體驗金融科技的未來！'
+    },
+    'promotion-cta-btn': { en: 'Contact Us →', zh: '立即體驗 →' },
 
-    // ===== AI视频 ai-videos.html (from doc section 3.6 / 4.6) =====
-    'aivideos-hero-label': { en: 'AI-Powered', zh: 'AI-Powered' },
-    'aivideos-hero-title': { en: 'AI Videos', zh: 'AI Videos' },
+    // ===== AI 影片 ai-videos.html =====
+    'aivideos-hero-label': { en: 'AI-Powered', zh: '人工智能驅動' },
+    'aivideos-hero-title': { en: 'AI Videos', zh: 'AI 影片' },
     'aivideos-hero-desc': {
       en: 'Discover Distinctive Advantages and Impactful Results',
-      zh: '發現獨特的優勢和有影響力的成果'
+      zh: '發掘獨特優勢，成就非凡效果'
     },
-    'aivideos-intro-label': { en: 'Our AI Video Services', zh: 'Our AI Video Services' },
-    'aivideos-intro-title': { en: 'Exclusive AI video experiences', zh: 'Exclusive AI video experiences' },
+    'aivideos-intro-label': { en: 'Our AI Video Services', zh: '我們的 AI 影片服務' },
+    'aivideos-intro-title': { en: 'Exclusive AI video experiences', zh: '獨家 AI 影片體驗' },
     'aivideos-intro-desc': {
       en: 'Explore three exclusive AI video services designed to preserve memories, enhance professional presence, and engage financial audiences.',
-      zh: '探索三種旨在保存記憶、增強專業形象和吸引金融受眾的獨家 AI 影片服務。'
+      zh: '探索三項旨在保存回憶、提升專業形象和吸引金融受眾的獨家 AI 影片服務。'
     },
-    'aivideos-card1-title': { en: 'My Way: Cherished Memory Videos', zh: 'My Way：珍貴的記憶視頻' },
+    'aivideos-card1-title': { en: 'My Way: Cherished Memory Videos', zh: 'My Way：珍藏回憶影片' },
     'aivideos-card1-desc': {
       en: 'Craft heartfelt AI-generated videos capturing milestones like weddings and graduations, creating lasting personal keepsakes.',
-      zh: '製作感人的AI生成視頻，記錄婚禮和畢業典禮等里程碑事件，創造持久的個人紀念品。'
+      zh: '製作感人至深的 AI 生成影片，記錄婚禮和畢業典禮等重要里程碑，留下永恆的個人紀念。'
     },
-    'aivideos-card1-btn': { en: 'Explore My Way →', zh: 'Explore My Way →' },
-    'aivideos-card2-title': { en: 'Aura: Professional Introduction Videos', zh: 'Aura: Professional Introduction Videos' },
+    'aivideos-card1-btn': { en: 'Explore My Way →', zh: '探索 My Way →' },
+    'aivideos-card2-title': { en: 'Aura: Professional Introduction Videos', zh: 'Aura：專業自我介紹影片' },
     'aivideos-card2-desc': {
       en: 'Deliver polished personal introductions tailored for professionals, boosting confidence and making memorable first impressions.',
-      zh: '提供針對專業人士量身訂製的精美個人介紹，增強信心並留下令人難忘的第一印象。'
+      zh: '為專業人士度身訂造的精美個人介紹，增強信心，留下難忘的第一印象。'
     },
-    'aivideos-card2-btn': { en: 'Explore Aura →', zh: 'Explore Aura →' },
-    'aivideos-card3-title': { en: '儀+約你: Engaging Financial Videos', zh: '儀+約你: 沉浸式金融視頻' },
+    'aivideos-card2-btn': { en: 'Explore Aura →', zh: '探索 Aura →' },
+    'aivideos-card3-title': { en: '儀+約你: Engaging Financial Videos', zh: '儀+約你：精彩金融影片' },
     'aivideos-card3-desc': {
       en: 'Produce captivating financial-themed AI videos featuring Mrs Cheung, designed to inform and entertain audiences effectively.',
-      zh: '製作以張女士為主角的引人入勝的金融主題人工智能視頻，旨在有效地跟觀眾交流。'
+      zh: '以張女士為主角，製作引人入勝的金融主題 AI 影片，旨在有效地傳遞資訊和娛樂觀眾。'
     },
-    'aivideos-card3-btn': { en: 'Learn More →', zh: 'Learn More →' },
-    'aivideos-deep-label': { en: 'Deep Dive', zh: 'Deep Dive' },
-    'aivideos-deep-title': { en: 'Explore each service in detail', zh: 'Explore each service in detail' },
+    'aivideos-card3-btn': { en: 'Learn More →', zh: '了解更多 →' },
+    'aivideos-deep-label': { en: 'Deep Dive', zh: '深入探索' },
+    'aivideos-deep-title': { en: 'Explore each service in detail', zh: '詳細了解各項服務' },
+    'aivideos-deep1-title': { en: 'My Way', zh: 'My Way' },
     'aivideos-deep1-desc': {
       en: 'Transform personal photos and audio into heartfelt AI video stories. Perfect for commemorating life\'s most meaningful milestones — from graduations and weddings to personal testaments.',
-      zh: '製作感人的影片來保存您最珍貴的回憶，例如畢業典禮和婚禮。'
+      zh: '將個人照片和音頻轉化為感人至深的 AI 影片故事。非常適合紀念人生中最有意義的時刻——從畢業典禮和婚禮到個人紀念。'
     },
+    'aivideos-deep2-title': { en: 'Aura', zh: 'Aura' },
     'aivideos-deep2-desc': {
       en: 'Stand out with a stunning one-minute professional intro video featuring your digital avatar, custom backgrounds, and AI-enhanced voiceovers in English, Mandarin, or Cantonese.',
-      zh: '專業的個人介紹影片旨在彰顯您獨特的專業身分。'
+      zh: '以精彩的個人數碼化身、自訂背景以及英語、普通話或粵語的 AI 增強配音，製作驚艷的一分鐘專業自我介紹影片，讓您脫穎而出。'
     },
+    'aivideos-deep3-title': { en: '儀+約你', zh: '儀+約你' },
     'aivideos-deep3-desc': {
       en: 'Engaging AI financial videos presented by Mrs Cheung, designed to make complex financial concepts accessible and entertaining for a broad audience.',
-      zh: 'Engaging financial-themed videos featuring Mrs Cheung, blending expertise with captivating storytelling.'
+      zh: '由張女士主持的精彩 AI 金融影片，旨在讓普羅大眾輕鬆理解複雜的金融概念，寓教於樂。'
     },
-    'aivideos-cta-label': { en: 'Get Started', zh: 'Get Started' },
-    'aivideos-cta-title': { en: 'Ready to create your AI video?', zh: 'Ready to create your AI video?' },
+    'aivideos-deep1-btn': { en: 'View Details →', zh: '查看詳情 →' },
+    'aivideos-deep2-btn': { en: 'View Details →', zh: '查看詳情 →' },
+    'aivideos-deep3-btn': { en: 'Enquire Now →', zh: '立即查詢 →' },
+    'aivideos-cta-label': { en: 'Get Started', zh: '立即開始' },
+    'aivideos-cta-title': { en: 'Ready to create your AI video?', zh: '準備好製作您的 AI 影片了嗎？' },
     'aivideos-cta-desc': {
       en: 'Contact us today to learn more about our AI video services and how they can transform your story.',
-      zh: 'Contact us today to learn more about our AI video services and how they can transform your story.'
+      zh: '立即聯絡我們，了解更多關於 AI 影片服務的資訊，以及我們如何為您的故事帶來改變。'
     },
     'aivideos-cta-btn': { en: 'Contact Us →', zh: '聯絡我們 →' },
 
-    // ===== 我的方式 my-way.html (from doc section 3.7 / 4.7) =====
-    'myway-hero-label': { en: 'AI Memory Videos', zh: 'AI Memory Videos' },
-    'myway-hero-title': { en: 'My Way: Your Memorable Voice and Appearance Recorder', zh: 'My Way: Your Memorable Voice and Appearance Recorder' },
-    'myway-hero-desc': { en: 'Preserve your precious memories in My Way', zh: 'Preserve your precious memories in My Way' },
-    'myway-about-label': { en: 'About My Way', zh: 'About My Way' },
-    'myway-about-title': { en: 'Transform your photos and sounds into heartfelt video stories', zh: 'Transform your photos and sounds into heartfelt video stories' },
+    // ===== My Way my-way.html =====
+    'myway-hero-label': { en: 'AI Memory Videos', zh: 'AI 回憶影片' },
+    'myway-hero-title': { en: 'My Way: Your Memorable Voice and Appearance Recorder', zh: 'My Way：記錄您的聲音與形象' },
+    'myway-hero-desc': { en: 'Preserve your precious memories in My Way', zh: '用 My Way 保存您的珍貴回憶' },
+    'myway-about-label': { en: 'About My Way', zh: '關於 My Way' },
+    'myway-about-title': { en: 'Transform your photos and sounds into heartfelt video stories', zh: '將您的照片和聲音轉化為感人至深的影片故事' },
     'myway-about-desc': {
       en: 'Discover how My Way transforms your photos and sounds into heartfelt video stories that cherish your treasured moments.',
-      zh: 'Discover how My Way transforms your photos and sounds into heartfelt video stories that cherish your treasured moments.'
+      zh: '發掘 My Way 如何將您的照片和聲音轉化為感人至深的影片故事，珍藏您的寶貴時刻。'
     },
-    'myway-features-label': { en: 'Features', zh: 'Features' },
-    'myway-features-title': { en: 'What makes My Way special', zh: 'What makes My Way special' },
-    'myway-feature1-title': { en: 'True Narrative', zh: 'True Narrative' },
+    'myway-features-label': { en: 'Features', zh: '特色功能' },
+    'myway-features-title': { en: 'What makes My Way special', zh: 'My Way 的獨特之處' },
+    'myway-feature1-title': { en: 'True Narrative', zh: '真實敘事' },
     'myway-feature1-desc': {
       en: 'Create memorable videos using your own images and audio, crafted uniquely to tell your personal story with emotional depth.',
-      zh: 'Create memorable videos using your own images and audio, crafted uniquely to tell your personal story with emotional depth.'
+      zh: '使用您自己的圖像和音頻製作難忘的影片，以獨特方式講述您的個人故事，充滿情感深度。'
     },
-    'myway-feature2-title': { en: 'Exclusive Customization', zh: 'Exclusive Customization' },
+    'myway-feature2-title': { en: 'Exclusive Customization', zh: '獨家訂製' },
     'myway-feature2-desc': {
       en: 'Highly customized your video theme, avatar image, dubbing language to match personal stories and identities.',
-      zh: 'Highly customized your video theme, avatar image, dubbing language to match personal stories and identities.'
+      zh: '高度訂製您的影片主題、虛擬形象和配音語言，完美匹配您的個人故事和身份。'
     },
-    'myway-feature3-title': { en: 'Simple Operation', zh: 'Simple Operation' },
+    'myway-feature3-title': { en: 'Simple Operation', zh: '簡單操作' },
     'myway-feature3-desc': {
       en: 'Smart templates are provided, making it accessible and enjoyable for everyone to preserve memories.',
-      zh: 'Smart templates are provided, making it accessible and enjoyable for everyone to preserve memories.'
+      zh: '提供智能模板，讓每個人都能輕鬆愉快地保存回憶。'
     },
-    'myway-scenarios-label': { en: 'Use Cases', zh: 'Use Cases' },
-    'myway-scenarios-title': { en: 'Capture every milestone', zh: 'Capture every milestone' },
-    'myway-scenario1': { en: 'Graduation', zh: 'Graduation' },
-    'myway-scenario2': { en: 'Career Success', zh: 'Career Success' },
-    'myway-scenario3': { en: 'Marriage', zh: 'Marriage' },
-    'myway-scenario4': { en: 'Childbirth', zh: 'Childbirth' },
-    'myway-scenario5': { en: 'Testament', zh: 'Testament' },
-    'myway-scenario6': { en: 'Others', zh: 'Others' },
+    'myway-scenarios-label': { en: 'Use Cases', zh: '適用場景' },
+    'myway-scenarios-title': { en: 'Capture every milestone', zh: '記錄每個重要里程碑' },
+    'myway-scenario1': { en: 'Graduation', zh: '畢業典禮' },
+    'myway-scenario2': { en: 'Career Success', zh: '事業有成' },
+    'myway-scenario3': { en: 'Marriage', zh: '婚禮' },
+    'myway-scenario4': { en: 'Childbirth', zh: '新生命誕生' },
+    'myway-scenario5': { en: 'Testament', zh: '遺囑' },
+    'myway-scenario6': { en: 'Others', zh: '其他' },
     'myway-testimonial': {
       en: '"My Way transformed our special moments into unforgettable stories with heartfelt creativity and flawless execution."',
-      zh: '"My Way transformed our special moments into unforgettable stories with heartfelt creativity and flawless execution."'
+      zh: '"My Way 用真摯的創意和完美的執行，將我們的特別時刻轉化為令人難忘的故事。"'
     },
     'myway-testimonial-author': { en: 'Emily Parker', zh: 'Emily Parker' },
-    'myway-testimonial-role': { en: 'Event Coordinator', zh: 'Event Coordinator' },
-    'myway-cta-label': { en: 'Start Today', zh: 'Start Today' },
-    'myway-cta-title': { en: 'Ready to preserve your memories?', zh: 'Ready to preserve your memories?' },
+    'myway-testimonial-role': { en: 'Event Coordinator', zh: '活動策劃' },
+    'myway-cta-label': { en: 'Start Today', zh: '立即開始' },
+    'myway-cta-title': { en: 'Ready to preserve your memories?', zh: '準備好保存您的回憶了嗎？' },
     'myway-cta-desc': {
       en: 'Contact us to learn more about My Way and start creating your video story.',
-      zh: 'Contact us to learn more about My Way and start creating your video story.'
+      zh: '聯絡我們以了解更多關於 My Way 的資訊，並開始創作您的影片故事。'
     },
-    'myway-cta-btn': { en: 'Get Started →', zh: 'Get Started →' },
+    'myway-cta-btn': { en: 'Get Started →', zh: '立即開始 →' },
 
-    // ===== 光环 aura.html (from doc section 3.8 / 4.8) =====
-    'aura-hero-label': { en: 'Professional AI Videos', zh: 'Professional AI Videos' },
-    'aura-hero-title': { en: 'Aura: Your AI-Powered Professional Intro Video', zh: 'Aura: Your AI-Powered Professional Intro Video' },
-    'aura-hero-desc': { en: 'Customize Your Introduction Video in Aura', zh: 'Customize Your Introduction Video in Aura' },
-    'aura-about-label': { en: 'About Aura', zh: 'About Aura' },
-    'aura-about-title': { en: 'Own your spotlight', zh: 'Own your spotlight' },
+    // ===== Aura aura.html =====
+    'aura-hero-label': { en: 'Professional AI Videos', zh: '專業 AI 影片' },
+    'aura-hero-title': { en: 'Aura: Your AI-Powered Professional Intro Video', zh: 'Aura：您的 AI 驅動專業自我介紹影片' },
+    'aura-hero-desc': { en: 'Customize Your Introduction Video in Aura', zh: '在 Aura 中訂製您的自我介紹影片' },
+    'aura-about-label': { en: 'About Aura', zh: '關於 Aura' },
+    'aura-about-title': { en: 'Own your spotlight', zh: '成為眾人焦點' },
     'aura-about-desc': {
       en: 'Stand out instantly with Aura. We craft stunning, one-minute intro videos featuring your realistic digital avatar, custom professional backgrounds, and crystal-clear, AI-enhanced voiceovers – in English, Mandarin, or Cantonese. Perfect your pitch, own your spotlight. Ready to shine?',
-      zh: 'Stand out instantly with Aura. We craft stunning, one-minute intro videos featuring your realistic digital avatar, custom professional backgrounds, and crystal-clear, AI-enhanced voiceovers – in English, Mandarin, or Cantonese. Perfect your pitch, own your spotlight. Ready to shine?'
+      zh: '使用 Aura 立即脫穎而出。我們為您製作精彩的一分鐘自我介紹影片，配備逼真的數碼化身、自訂專業背景以及英語、普通話或粵語的清晰 AI 增強配音。完善您的表達，成為眾人焦點。準備好發光發亮了嗎？'
     },
-    'aura-advantages-label': { en: 'Advantages', zh: 'Advantages' },
-    'aura-advantages-title': { en: 'Why choose Aura?', zh: 'Why choose Aura?' },
-    'aura-adv1-title': { en: 'One-Minute Highlights', zh: 'One-Minute Highlights' },
-    'aura-adv1-desc': { en: 'Introduce your core value during the prime attention period', zh: 'Introduce your core value during the prime attention period' },
-    'aura-adv2-title': { en: 'Realistic and Vivid Portraits', zh: 'Realistic and Vivid Portraits' },
-    'aura-adv2-desc': { en: 'Generate a one-to-one dynamic image based on your photos', zh: 'Generate a one-to-one dynamic image based on your photos' },
-    'aura-adv3-title': { en: 'Professional Customized Background', zh: 'Professional Customized Background' },
-    'aura-adv3-desc': { en: 'Customize pictures and text backgrounds, and choose from a variety of professional templates', zh: 'Customize pictures and text backgrounds, and choose from a variety of professional templates' },
-    'aura-adv4-title': { en: 'Optional Video Language', zh: 'Optional Video Language' },
-    'aura-adv4-desc': { en: 'You can choose Mandarin, Cantonese or English dubbing to flexibly match application scenarios', zh: 'You can choose Mandarin, Cantonese or English dubbing to flexibly match application scenarios' },
-    'aura-process-label': { en: 'Process', zh: 'Process' },
-    'aura-process-title': { en: 'How Aura Works', zh: 'How Aura Works' },
-    'aura-step1-title': { en: 'Personalize Your Profile', zh: 'Personalize Your Profile' },
-    'aura-step1-desc': { en: 'Start by preparing your portrait and a sound recording.', zh: 'Start by preparing your portrait and a sound recording.' },
-    'aura-step2-title': { en: 'Customize Your Video', zh: 'Customize Your Video' },
-    'aura-step2-desc': { en: 'Fill out the Google Form for your introduction video script and background.', zh: 'Fill out the Google Form for your introduction video script and background.' },
-    'aura-step3-title': { en: 'Finalize and Share', zh: 'Finalize and Share' },
-    'aura-step3-desc': { en: 'Review your video, make final tweaks, and download or share.', zh: 'Review your video, make final tweaks, and download or share.' },
-    'aura-cta-label': { en: 'Get Started', zh: 'Get Started' },
-    'aura-cta-title': { en: 'Ready to shine with Aura?', zh: 'Ready to shine with Aura?' },
-    'aura-cta-desc': { en: 'Contact us today to create your professional AI introduction video.', zh: 'Contact us today to create your professional AI introduction video.' },
-    'aura-cta-btn': { en: 'Create Your Aura →', zh: 'Create Your Aura →' },
+    'aura-advantages-label': { en: 'Advantages', zh: '獨特優勢' },
+    'aura-advantages-title': { en: 'Why choose Aura?', zh: '為什麼選擇 Aura？' },
+    'aura-adv1-title': { en: 'One-Minute Highlights', zh: '一分鐘精華' },
+    'aura-adv1-desc': { en: 'Introduce your core value during the prime attention period', zh: '在最佳注意力時段介紹您的核心價值' },
+    'aura-adv2-title': { en: 'Realistic and Vivid Portraits', zh: '逼真生動的形象' },
+    'aura-adv2-desc': { en: 'Generate a one-to-one dynamic image based on your photos', zh: '基於您的照片生成一對一的動態形象' },
+    'aura-adv3-title': { en: 'Professional Customized Background', zh: '專業訂製背景' },
+    'aura-adv3-desc': { en: 'Customize pictures and text backgrounds, and choose from a variety of professional templates', zh: '自訂圖片和文字背景，並從多種專業模板中選擇' },
+    'aura-adv4-title': { en: 'Optional Video Language', zh: '可選影片語言' },
+    'aura-adv4-desc': { en: 'You can choose Mandarin, Cantonese or English dubbing to flexibly match application scenarios', zh: '可選擇普通話、粵語或英語配音，靈活匹配不同應用場景' },
+    'aura-process-label': { en: 'Process', zh: '製作流程' },
+    'aura-process-title': { en: 'How Aura Works', zh: 'Aura 如何運作' },
+    'aura-step1-title': { en: 'Personalize Your Profile', zh: '個人化您的個人資料' },
+    'aura-step1-desc': { en: 'Start by preparing your portrait and a sound recording.', zh: '首先準備您的肖像和錄音。' },
+    'aura-step2-title': { en: 'Customize Your Video', zh: '訂製您的影片' },
+    'aura-step2-desc': { en: 'Fill out the Google Form for your introduction video script and background.', zh: '填寫 Google 表單，提供您的自我介紹影片腳本和背景。' },
+    'aura-step3-title': { en: 'Finalize and Share', zh: '定稿並分享' },
+    'aura-step3-desc': { en: 'Review your video, make final tweaks, and download or share.', zh: '檢視您的影片，進行最後調整，然後下載或分享。' },
+    'aura-cta-label': { en: 'Get Started', zh: '立即開始' },
+    'aura-cta-title': { en: 'Ready to shine with Aura?', zh: '準備好用 Aura 發光發亮嗎？' },
+    'aura-cta-desc': { en: 'Contact us today to create your professional AI introduction video.', zh: '立即聯絡我們，創作您的專業 AI 自我介紹影片。' },
+    'aura-cta-btn': { en: 'Create Your Aura →', zh: '創作您的 Aura →' },
 
-    // ===== 商店 shop.html (from doc section 3.9 / 4.9) =====
-    'shop-hero-label': { en: 'Products', zh: 'Products' },
+    // ===== 商店 shop.html =====
+    'shop-hero-label': { en: 'Products', zh: '產品' },
     'shop-hero-title': { en: 'Shop', zh: '商店' },
-    'shop-intro-label': { en: 'Available Now', zh: 'Available Now' },
-    'shop-intro-title': { en: 'Our Products', zh: 'Our Products' },
+    'shop-intro-label': { en: 'Available Now', zh: '現已發售' },
+    'shop-intro-title': { en: 'Our Products', zh: '我們的產品' },
     'shop-product-title': { en: 'Computer', zh: '電腦' },
-    'shop-product-desc': { en: 'High-performance computer for professional use.', zh: 'High-performance computer for professional use.' },
+    'shop-product-desc': { en: 'High-performance computer for professional use.', zh: '高效能專業電腦，滿足日常工作所需。' },
     'shop-product-btn': { en: 'Add to Cart', zh: '加入購物車' },
 
-    // ===== 加入我们 join-us.html (from doc section 3.10 / 4.10) =====
-    'joinus-hero-label': { en: 'Careers', zh: 'Careers' },
-    'joinus-hero-title': { en: 'Join Our Team Today', zh: '現在就加入我們的團隊' },
-    'joinus-intro-label': { en: 'Why Join Us', zh: 'Why Join Us' },
-    'joinus-intro-title': { en: 'Be part of the fintech revolution', zh: 'Be part of the fintech revolution' },
+    // ===== 加入我們 join-us.html =====
+    'joinus-hero-label': { en: 'Careers', zh: '招賢納士' },
+    'joinus-hero-title': { en: 'Join Our Team Today', zh: '今天就加入我們的團隊' },
+    'joinus-intro-label': { en: 'Why Join Us', zh: '為何加入我們' },
+    'joinus-intro-title': { en: 'Be part of the fintech revolution', zh: '成為金融科技革命的一份子' },
     'joinus-intro-desc': {
       en: 'At MC Fintech Solutions Limited, we\'re at the forefront of fintech innovation, developing cutting-edge software and providing expert IT consultancy. We\'re always looking for talented individuals to join our dynamic team. If you\'re passionate about technology and finance, we want to hear from you!',
-      zh: '萬利科技公司站在金融科技創新的前沿，致力於開發尖端軟體並提供專業的 IT 諮詢服務。我們始終期待優秀人才加入我們充滿活力的團隊。如果您對科技和金融充滿熱情，我們期待您的加入！'
+      zh: '萬利科技公司站在金融科技創新的前沿，致力於開發尖端軟件並提供專業的 IT 諮詢服務。我們始終期待優秀人才加入我們充滿活力的團隊。如果您對科技和金融充滿熱情，我們期待您的加入！'
     },
-    'joinus-positions-label': { en: 'Open Positions', zh: 'Open Positions' },
-    'joinus-positions-title': { en: 'Find your role', zh: 'Find your role' },
+    'joinus-positions-label': { en: 'Open Positions', zh: '職位空缺' },
+    'joinus-positions-title': { en: 'Find your role', zh: '尋找適合您的職位' },
     'joinus-role1-badge': { en: 'Internship', zh: '實習' },
-    'joinus-role1-title': { en: 'Internship', zh: 'Internship' },
+    'joinus-role1-title': { en: 'Internship', zh: '實習生' },
     'joinus-role1-desc': {
       en: 'Learn from experienced developers, assist in developing and testing financial software.',
-      zh: '向經驗豐富的開發人員學習並獲得金融科技方面的實踐經驗，協助開發和測試金融軟體應用程式。'
+      zh: '向經驗豐富的開發人員學習，並獲得金融科技方面的實踐經驗，協助開發和測試金融軟件應用程式。'
     },
     'joinus-role1-req': { en: 'Requirements', zh: '要求' },
-    'joinus-role1-req-val': {
-      en: 'CS degree (in progress or completed)',
-      zh: '目前正在攻讀計算機科學或相關領域的學位'
-    },
-    'joinus-role1-dur': { en: 'Duration', zh: '持續時間' },
-    'joinus-role1-dur-val': { en: '3–6 months', zh: '3-6 個月' },
+    'joinus-role1-req-val': { en: 'CS degree (in progress or completed)', zh: '目前正在攻讀計算機科學或相關領域的學位' },
+    'joinus-role1-dur': { en: 'Duration', zh: '為期' },
+    'joinus-role1-dur-val': { en: '3–6 months', zh: '3 至 6 個月' },
     'joinus-role2-badge': { en: 'Full-Time', zh: '全職' },
     'joinus-role2-title': { en: 'Technician', zh: '技術人員' },
     'joinus-role2-desc': {
       en: 'Technical support for fintech products, ensuring smooth operation and excellent client service.',
-      zh: '為我們的金融科技產品和服務提供技術支援，排查軟體問題並協助系統維護。'
+      zh: '為我們的金融科技產品和服務提供技術支援，排查軟件問題並協助系統維護。'
     },
     'joinus-role2-req': { en: 'Requirements', zh: '要求' },
     'joinus-role2-req-val': {
       en: 'Bachelor\'s in IT/CS; 1–2 years experience',
-      zh: 'IT、計算機科學或相關領域的學士學位，1-2 年 IT 支援或金融科技經驗'
+      zh: 'IT、計算機科學或相關領域的學士學位，1 至 2 年 IT 支援或金融科技經驗'
     },
     'joinus-role3-badge': { en: 'Full-Time', zh: '全職' },
     'joinus-role3-title': { en: 'Assistant', zh: '助理' },
     'joinus-role3-desc': {
       en: 'Support senior consultants, conduct fintech trend research, and contribute to strategic projects.',
-      zh: '在客戶專案和演示中為高級顧問提供支援，進行金融科技趨勢研究和市場分析。'
+      zh: '在客戶項目和演示中為高級顧問提供支援，進行金融科技趨勢研究和市場分析。'
     },
     'joinus-role3-req': { en: 'Requirements', zh: '要求' },
     'joinus-role3-req-val': {
       en: 'Bachelor\'s in Business/Finance/CS; strong analytical skills',
-      zh: '商業、金融或計算機科學學士學位，較強的分析和溝通能力'
+      zh: '商業、金融或計算機科學學士學位，具備優秀的分析和溝通能力'
     },
-    'joinus-cta-label': { en: 'Apply Now', zh: 'Apply Now' },
-    'joinus-cta-title': { en: 'Join Us — Click Here →', zh: '加入我們 — 按這裏 →' },
+    'joinus-cta-label': { en: 'Apply Now', zh: '立即申請' },
+    'joinus-cta-title': { en: 'Join Us — Click Here →', zh: '加入我們 — 按此申請 →' },
     'joinus-cta-desc': {
       en: '"The only limit is the extent of your imagination." — Jayla H.',
-      zh: '"唯一的限制是你的想像力。" — Jayla H.'
+      zh: '"唯一的限制是你想像力的邊界。" — Jayla H.'
     },
-    'joinus-cta-btn': { en: 'Apply Now →', zh: 'Apply Now →' },
+    'joinus-cta-btn': { en: 'Apply Now →', zh: '立即申請 →' },
 
-    // ===== 联系我们 contact.html (from doc section 3.11 / 4.11) =====
-    'contact-hero-label': { en: 'Reach Out', zh: 'Reach Out' },
+    // ===== 聯絡我們 contact.html =====
+    'contact-hero-label': { en: 'Reach Out', zh: '聯繫我們' },
     'contact-hero-title': { en: 'Contact', zh: '聯絡我們' },
-    'contact-info-label': { en: 'Get In Touch', zh: 'Get In Touch' },
-    'contact-info-title': { en: 'We\'d love to hear from you', zh: 'We\'d love to hear from you' },
+    'contact-info-label': { en: 'Get In Touch', zh: '與我們聯繫' },
+    'contact-info-title': { en: 'We\'d love to hear from you', zh: '我們樂意聆聽您的聲音' },
     'contact-address-label': { en: 'Address', zh: '地址' },
     'contact-address-val': {
       en: 'Unit 02, 12/F Boss Commercial Centre, 28 Ferry Street, Yau Ma Tei, Kowloon, Hong Kong',
-      zh: '香港九龍佐敦渡船街28號寶時商業中心12樓1202'
+      zh: '香港九龍佐敦渡船街28號寶時商業中心12樓1202室'
     },
     'contact-email-label': { en: 'Email', zh: '電郵' },
-    'contact-phone-label': { en: 'Phone', zh: '電話號碼' },
-    'contact-getting-title': { en: 'Getting There', zh: 'Getting There' },
+    'contact-phone-label': { en: 'Phone', zh: '電話' },
+    'contact-getting-title': { en: 'Getting There', zh: '交通指南' },
     'contact-transport1-label': { en: 'By MTR', zh: '乘搭地鐵' },
     'contact-transport1-desc': {
       en: 'Yau Ma Tei Station (Tsuen Wan Line): Exit A1 or A2. Jordan Station (Kwun Tong Line): Exit C.',
-      zh: '油麻地站（荃灣線）：A1或A2出口。佐敦站（觀塘線）：C出口。'
+      zh: '油麻地站（荃灣線）：A1 或 A2 出口。佐敦站（觀塘線）：C 出口。'
     },
     'contact-transport2-label': { en: 'By Bus', zh: '乘搭巴士' },
     'contact-transport2-desc': {
       en: '2E, 12, 914, 914X to Ferry Street Station.',
-      zh: '搭乘 2E、12、914、914X 公車到 Ferry Street 站。'
+      zh: '搭乘 2E、12、914、914X 巴士到渡船街站。'
     },
-    'contact-form-label': { en: 'Send a Message', zh: 'Send a Message' },
-    'contact-form-title': { en: 'How can we help?', zh: 'How can we help?' },
-    'contact-form-name-label': { en: 'Your Name', zh: 'Your Name' },
-    'contact-form-name-placeholder': { en: 'John Smith', zh: 'John Smith' },
-    'contact-form-email-label': { en: 'Email Address', zh: 'Email Address' },
-    'contact-form-email-placeholder': { en: 'john@example.com', zh: 'john@example.com' },
-    'contact-form-msg-label': { en: 'Message', zh: 'Message' },
-    'contact-form-msg-placeholder': { en: 'Tell us how we can help you...', zh: 'Tell us how we can help you...' },
-    'contact-form-btn': { en: 'Send Message →', zh: 'Send Message →' },
+    'contact-form-label': { en: 'Send a Message', zh: '發送訊息' },
+    'contact-form-title': { en: 'How can we help?', zh: '我們可以如何幫助您？' },
+    'contact-form-name-label': { en: 'Your Name', zh: '您的姓名' },
+    'contact-form-name-placeholder': { en: 'John Smith', zh: '請輸入您的姓名' },
+    'contact-form-email-label': { en: 'Email Address', zh: '電郵地址' },
+    'contact-form-email-placeholder': { en: 'john@example.com', zh: '請輸入您的電郵' },
+    'contact-form-msg-label': { en: 'Message', zh: '您的訊息' },
+    'contact-form-msg-placeholder': { en: 'Tell us how we can help you...', zh: '請告訴我們如何為您提供協助…' },
+    'contact-form-btn': { en: 'Send Message →', zh: '發送訊息 →' },
 
-    // 测试标记
+    // 測試標記
     'test-indicator': { en: '', zh: '【中文模式測試 ✓】' }
   };
 
@@ -600,9 +626,9 @@
         { sel: '.two-cards .promo-card:nth-child(2) h3', key: 'index-promise-title' },
         { sel: '.two-cards .promo-card:nth-child(2) p', key: 'index-promise-desc' },
         { sel: '.two-cards .promo-card:nth-child(2) .read-more', key: 'index-promise-readmore' },
-        { sel: '.section-header .section-label', key: 'index-services-label' },
-        { sel: '.section-header h2', key: 'index-services-title' },
-        { sel: '.section-header p', key: 'index-services-desc' },
+        { sel: '.bg-alt .section-header .section-label', key: 'index-services-label' },
+        { sel: '.bg-alt .section-header h2', key: 'index-services-title' },
+        { sel: '.bg-alt .section-header p', key: 'index-services-desc' },
         { sel: '.service-card:nth-child(1) h3', key: 'index-service1-title' },
         { sel: '.service-card:nth-child(1) p', key: 'index-service1-desc' },
         { sel: '.service-card:nth-child(2) h3', key: 'index-service2-title' },
@@ -655,6 +681,18 @@
         { sel: '.page-hero .section-label', key: 'services-hero-label' },
         { sel: '.page-hero h1', key: 'services-hero-title' },
         { sel: '.section-header p', key: 'services-intro' },
+        { sel: '.service-section:nth-child(1) .section-label', key: 'services-network-label' },
+        { sel: '.service-section:nth-child(1) h3', key: 'services-network-title' },
+        { sel: '.service-section:nth-child(1) .service-section-body p', key: 'services-network-desc' },
+        { sel: '.service-section:nth-child(2) .section-label', key: 'services-cloud-label' },
+        { sel: '.service-section:nth-child(2) h3', key: 'services-cloud-title' },
+        { sel: '.service-section:nth-child(2) .service-section-body p', key: 'services-cloud-desc' },
+        { sel: '.service-section:nth-child(3) .section-label', key: 'services-security-label' },
+        { sel: '.service-section:nth-child(3) h3', key: 'services-security-title' },
+        { sel: '.service-section:nth-child(3) .service-section-body p', key: 'services-security-desc' },
+        { sel: '.service-section:nth-child(4) .section-label', key: 'services-ai-label' },
+        { sel: '.service-section:nth-child(4) h3', key: 'services-ai-title' },
+        { sel: '.service-section:nth-child(4) .service-section-body p', key: 'services-ai-desc' },
         { sel: '.quote-block blockquote', key: 'services-quote' },
         { sel: '.quote-block cite', key: 'services-quote-author' },
       ],
@@ -666,8 +704,8 @@
         { sel: '.two-col-intro .intro-text p', key: 'funding-why-desc' },
         { sel: '.intro-deco-badge .badge-main', key: 'funding-badge-main' },
         { sel: '.intro-deco-badge .badge-sub', key: 'funding-badge-sub' },
-        { sel: '.section-header .section-label', key: 'funding-opp-label' },
-        { sel: '.section-header h2', key: 'funding-opp-title' },
+        { sel: '.bg-alt .section-header .section-label', key: 'funding-opp-label' },
+        { sel: '.bg-alt .section-header h2', key: 'funding-opp-title' },
         { sel: '.promo-card:nth-child(1) .section-label', key: 'funding-opp1-label' },
         { sel: '.promo-card:nth-child(1) p', key: 'funding-opp1-desc' },
         { sel: '.promo-card:nth-child(2) .section-label', key: 'funding-opp2-label' },
@@ -701,7 +739,6 @@
         { sel: '.section-header.centered .section-label', key: 'promotion-intro-label' },
         { sel: '.section-header.centered h2', key: 'promotion-intro-title' },
         { sel: '.section-header.centered p', key: 'promotion-intro-desc' },
-        // Product cards
         { sel: '.product-card:nth-child(1) .product-date', key: 'promotion-date1' },
         { sel: '.product-card:nth-child(1) h3', key: 'promotion-product1-title' },
         { sel: '.product-card:nth-child(1) .product-body p', key: 'promotion-product1-desc' },
@@ -734,9 +771,15 @@
         { sel: '.ai-card:nth-child(3) .read-more', key: 'aivideos-card3-btn' },
         { sel: 'section:nth-of-type(3) .section-label', key: 'aivideos-deep-label' },
         { sel: 'section:nth-of-type(3) h2', key: 'aivideos-deep-title' },
+        { sel: 'section:nth-of-type(3) .funding-card:nth-child(1) h4', key: 'aivideos-deep1-title' },
         { sel: 'section:nth-of-type(3) .funding-card:nth-child(1) p', key: 'aivideos-deep1-desc' },
+        { sel: 'section:nth-of-type(3) .funding-card:nth-child(1) .read-more', key: 'aivideos-deep1-btn' },
+        { sel: 'section:nth-of-type(3) .funding-card:nth-child(2) h4', key: 'aivideos-deep2-title' },
         { sel: 'section:nth-of-type(3) .funding-card:nth-child(2) p', key: 'aivideos-deep2-desc' },
+        { sel: 'section:nth-of-type(3) .funding-card:nth-child(2) .read-more', key: 'aivideos-deep2-btn' },
+        { sel: 'section:nth-of-type(3) .funding-card:nth-child(3) h4', key: 'aivideos-deep3-title' },
         { sel: 'section:nth-of-type(3) .funding-card:nth-child(3) p', key: 'aivideos-deep3-desc' },
+        { sel: 'section:nth-of-type(3) .funding-card:nth-child(3) .read-more', key: 'aivideos-deep3-btn' },
         { sel: '.cta-band .section-label', key: 'aivideos-cta-label' },
         { sel: '.cta-band h2', key: 'aivideos-cta-title' },
         { sel: '.cta-band p', key: 'aivideos-cta-desc' },
