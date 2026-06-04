@@ -8,11 +8,11 @@
   --bg-secondary: #F1F3F8;
   --bg-card: #FFFFFF;
   --bg-elevated: #F6F7FB;
-  --bg-hero: #0B1A2B;
+  --bg-hero: #1E3347;
 
   --text-primary: #1A1F2E;
-  --text-secondary: #54607A;
-  --text-muted: #8D96AB;
+  --text-secondary: #5A5E68;
+  --text-muted: #8E9099;
   --text-on-dark: #F2F4F8;
 
   --accent: #1AAD8C;
@@ -22,6 +22,7 @@
 
   --accent-warm: #E8A817;
   --accent-warm-light: #FFF8E5;
+  --accent-warm-glow: rgba(232,168,23,0.07);
 
   --border: rgba(0,0,0,0.07);
   --border-hover: rgba(0,0,0,0.13);
@@ -77,6 +78,15 @@ p { color: var(--text-secondary); font-size: 1rem; line-height: 1.75; }
   color: var(--accent);
   display: block;
   margin-bottom: 0.75rem;
+}
+.section-label::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin-top: 0.5rem;
+  background: var(--accent-warm);
+  border-radius: 2px;
 }
 
 /* ===== LAYOUT ===== */
@@ -323,8 +333,9 @@ section { padding: var(--section-v) 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 60%, rgba(26,173,140,0.08) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 20%, rgba(232,168,23,0.05) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 30% 60%, rgba(26,173,140,0.07) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 20%, rgba(232,168,23,0.22) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 90%, rgba(232,168,23,0.1) 0%, transparent 55%);
 }
 
 .hero-inner {
@@ -339,7 +350,7 @@ section { padding: var(--section-v) 0; }
   font-weight: 400;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-warm);
   margin-bottom: 2rem;
   display: block;
 }
@@ -348,7 +359,7 @@ section { padding: var(--section-v) 0; }
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 3.5vw, 2.2rem);
   font-weight: 500;
-  color: var(--text-on-dark);
+  color: #C5DDEF;
   line-height: 1.45;
   margin-bottom: 1.5rem;
 }
@@ -356,7 +367,7 @@ section { padding: var(--section-v) 0; }
 .hero-attr {
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: rgba(232,168,23,0.7);
   font-style: italic;
   margin-bottom: 3rem;
 }
@@ -368,9 +379,9 @@ section { padding: var(--section-v) 0; }
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--accent-warm);
   padding: 0.75rem 1.5rem;
-  border: 1px solid rgba(26,173,140,0.4);
+  border: 1px solid rgba(232,168,23,0.5);
   border-radius: 100px;
   transition: all 0.3s;
   letter-spacing: 0.05em;
@@ -378,8 +389,8 @@ section { padding: var(--section-v) 0; }
 }
 
 .hero-cta:hover {
-  background: rgba(26,173,140,0.1);
-  border-color: var(--accent);
+  background: rgba(232,168,23,0.1);
+  border-color: var(--accent-warm);
   transform: translateY(2px);
 }
 
@@ -396,7 +407,8 @@ section { padding: var(--section-v) 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 100%, rgba(26,173,140,0.1) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 100%, rgba(26,173,140,0.1) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 10%, rgba(232,168,23,0.1) 0%, transparent 50%);
 }
 
 .page-hero-inner { position: relative; z-index: 1; }
@@ -612,7 +624,8 @@ section { padding: var(--section-v) 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 20% 50%, rgba(26,173,140,0.1) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 20% 50%, rgba(26,173,140,0.1) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 50%, rgba(232,168,23,0.12) 0%, transparent 55%);
 }
 
 .cta-band-inner {
@@ -856,7 +869,7 @@ section { padding: var(--section-v) 0; }
 .price-sale {
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--accent);
+  color: var(--accent-warm);
 }
 
 .price-original {
@@ -990,7 +1003,7 @@ section { padding: var(--section-v) 0; }
   border-radius: 16px;
   padding: 2rem;
   box-shadow: var(--shadow-sm);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--accent-warm);
 }
 
 .value-num {
@@ -1208,7 +1221,7 @@ section { padding: var(--section-v) 0; }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--accent-warm);
   color: #fff;
   font-family: var(--font-heading);
   font-weight: 700;
