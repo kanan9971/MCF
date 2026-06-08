@@ -559,7 +559,7 @@
     const page = path.replace(/^\//, '').replace(/\.html$/, '') || 'index';
 
     const shared = [
-      { sel: '.nav-logo', key: 'nav-logo' },
+      { sel: '.nav-logo span', key: 'nav-logo' },
       { sel: '.nav-lang', key: 'nav-lang-label-en' },
       { sel: '.nav-cta', key: 'nav-cta' },
       { sel: '.nav-menu > li:nth-child(1) > a', key: 'nav-home' },
