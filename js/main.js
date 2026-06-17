@@ -30,7 +30,7 @@
   if (hamburger && drawer) {
     hamburger.addEventListener('click', function () {
       const isOpen = drawer.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
@@ -41,6 +41,19 @@
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
+    });
+
+    // Close when tapping outside
+    document.addEventListener('click', function (e) {
+      if (
+        drawer.classList.contains('open') &&
+        !drawer.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        drawer.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
     });
   }
 
